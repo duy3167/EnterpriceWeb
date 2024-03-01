@@ -7,10 +7,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Faculty\" />
-    <Folder Include="Views\NewFolder\" />
+    <Compile Remove="Views\Faculty\**" />
+    <Compile Remove="Views\NewFolder\**" />
+    <Content Remove="Views\Faculty\**" />
+    <Content Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="Views\Faculty\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
+    <None Remove="Views\Faculty\**" />
+    <None Remove="Views\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\image\Articcle\" />
     <Folder Include="wwwroot\image\User\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data" Version="8.0.11" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
