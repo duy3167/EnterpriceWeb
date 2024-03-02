@@ -20,7 +20,10 @@ namespace EnterpriceWeb.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            if (HttpContext.Session.Get("gmail")!=null)
+            { return View(); }
+            else { return View("Index"); }
+            
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
